@@ -9,11 +9,9 @@ import sys
 
 
 
-
 def main(imbalance_corrected=False):
     sex_splits = [0.3, 0.4, 0.5, 0.6, 0.7]
     print(sex_splits)
-
 
     # Sex Statistics - SBP and DBP distributions
     # Men
@@ -143,7 +141,7 @@ def main(imbalance_corrected=False):
         plt.ylabel('True Positive Rate (TPR)')
         plt.legend()
         plt.grid(True)
-        plt.savefig(f'roc_curve_{i}.png')
+        plt.savefig(f'roc_curve_{sex_splits[i]*100:.0f}_percent_male.png')
 
 
 if __name__== "__main__":
